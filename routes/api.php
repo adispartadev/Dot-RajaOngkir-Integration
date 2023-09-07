@@ -17,10 +17,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
+Route::get('login', [AuthC::class, 'loginRedirecter'])->name('login');
 Route::post('login', [AuthC::class, 'login']);
 
-Route::group(['middleware' => 'AuthApi'], function() {
+Route::group(['middleware' => ['auth:sanctum', 'AuthApi']], function() {
     Route::get('search/provinces', [WilayahC::class, 'cariProvinsi']);
     Route::get('search/cities', [WilayahC::class, 'cariKota']);
 });

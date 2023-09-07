@@ -18,7 +18,7 @@ class AuthApi
     {
         $user = auth()->user();
         if($user == null) {
-            return Tools::jsonResponse('error', 'Unauthenticate', 401);
+            return Tools::jsonResponse('error', 'Unauthenticate', null, 401);
         }
         return $next($request);
     }

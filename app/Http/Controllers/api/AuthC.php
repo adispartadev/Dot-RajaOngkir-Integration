@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Validator;
 class AuthC extends Controller
 {
 
+    public function loginRedirecter() {
+        return Tools::jsonResponse('error', 'Unauthenticate', null, 401);
+    }
 
     public function login(Request $request) {
         $validator = Validator::make($request->all(), [
