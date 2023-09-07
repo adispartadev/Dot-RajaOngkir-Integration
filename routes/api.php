@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\AuthC;
 use App\Http\Controllers\api\WilayahC;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -15,10 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+
+Route::post('login', [AuthC::class, 'login']);
+
+Route::group(['middleware' => 'AuthApi'], function() {
+    Route::get('search/provinces', [WilayahC::class, 'cariProvinsi']);
+    Route::get('search/cities', [WilayahC::class, 'cariKota']);
 });
-
-
-Route::get('search/provinces', [WilayahC::class, 'cariProvinsi']);
-Route::get('search/cities', [WilayahC::class, 'cariKota']);

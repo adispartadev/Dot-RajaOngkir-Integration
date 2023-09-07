@@ -2,6 +2,7 @@
 
 namespace App\Http\Helpers;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Validator;
 
 class Tools
 {
@@ -14,6 +15,7 @@ class Tools
             'data'    => $data
         ], $code);
     }
+
 
 
 }
