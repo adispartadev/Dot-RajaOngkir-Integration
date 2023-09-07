@@ -68,4 +68,5 @@ Gunakan akses token tersebut untuk mengakses endpoint pencarian kota dan provins
 |--|--|
 |Authorization|Bearer {{token}}|
 
-
+### Soal 3
+Unit test telah disiapkan, untuk menjalankan unit testing silahkan jalankan command : `composer test` 
