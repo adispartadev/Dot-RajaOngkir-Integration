@@ -58,7 +58,6 @@ Saat endpoint dijalankan, maka akan mereturn berupa akses token. Berikut merupak
 			"email_verified_at": "2023-09-07T05:41:49.000000Z",
 			"created_at": "2023-09-07T05:41:50.000000Z",
 			"updated_at": "2023-09-07T05:41:50.000000Z",
-			"token": "1|k3J7oXDjIEmP7Jy4KVuXbmmY5VZcSF47bMk90ydE8a578415"
 		}
 	}
 }
